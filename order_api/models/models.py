@@ -36,11 +36,11 @@ class SaleOrderinh(models.Model):
     myfatoorah_bol = fields.Boolean( string='Link Sent',copy=False)
     formula = fields.Char( string='Formula',copy=False)
 
-    @api.model_create_multi
-    def create(self, vals_list):
-        res = super(SaleOrderinh, self).create(vals_list)
-        res.create_fatoorah_link()
-        return res
+#     @api.model_create_multi
+#     def create(self, vals_list):
+#         res = super(SaleOrderinh, self).create(vals_list)
+#         res.create_fatoorah_link()
+#         return res
 
     def create_fatoorah_link(self):
         try:
