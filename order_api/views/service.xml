@@ -107,7 +107,20 @@
                 </div>
             </xpath>
         </field>
-    </record>        
+    </record>   
+    
+    
+     <record id="bal_planning_slot_view_tree" model="ir.ui.view">
+        <field name="name">planning.slot.tree</field>
+        <field name="model">planning.slot</field>
+        <field name="inherit_id" ref="planning.planning_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='allocated_hours']" position="after">
+                <field name="driver_id" optional="hide" />
+               
+            </xpath>
+        </field>
+    </record>
     
     
     
