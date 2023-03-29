@@ -152,3 +152,18 @@ class AMInh(models.Model):
     _sql_constraints = [
         ('imp_id_uniq', 'unique (imp_id)', "ID Already exist"),
     ]
+    
+    
+class AccountInvoiceReport(models.Model):
+    _inherit = "account.invoice.report"
+
+    partner_shipping_id = fields.Many2one('res.partner','Delivery Address')
+
+    def _select(self):
+        return super(AccountInvoiceReport, self)._select() + ", move.partner_shipping_id as partner_shipping_id"
+
+
+
+    def _group_by(self):
+        return super(AccountInvoiceReport, self)._group_by() + ", move.partner_shipping_id"
+
