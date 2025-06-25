@@ -1,2 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_app_data,app_data_app_data,model_app_data,base.group_user,1,1,1,1
