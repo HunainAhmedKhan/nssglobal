@@ -1,4 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_twillio_config,access_twillio_config,model_twillio_config,base.group_user,1,1,1,1
-access_service_note,access_service_note,model_service_note,base.group_user,1,1,1,1
-access_service_line,service.line,model_service_line,base.group_user,1,1,1,1
